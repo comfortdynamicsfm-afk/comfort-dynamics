@@ -149,3 +149,12 @@ img{max-width:100%; display:block}
     padding: 4px;
   }
 }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 40px;
+}
+.hero-card {
+  margin-top: 0;
+}
