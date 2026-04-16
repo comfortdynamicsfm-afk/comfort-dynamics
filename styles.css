@@ -148,13 +148,17 @@ img{max-width:100%; display:block}
     height: 55px;
     padding: 4px;
   }
-}
 .hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: start;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  align-items: start !important;
   gap: 40px;
 }
-.hero-card {
-  margin-top: 0;
+
+.hero-grid > div {
+  align-self: start;
+}
+  .hero-card {
+  margin-top: 0 !important;
+  align-self: start;
 }
