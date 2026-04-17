@@ -172,3 +172,14 @@ img{max-width:100%; display:block}
     max-width: 100%;
   }
 }
+@media (max-width: 768px) {
+  .hero-card {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-grid {
+    padding: 0 15px;
+  }
+}
