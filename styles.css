@@ -197,3 +197,30 @@ img{max-width:100%; display:block}
 .booking-note{font-size:15px!important;line-height:1.5;color:inherit;max-width:650px;}
 .mobile-book-bar{display:none;}
 @media(max-width:640px){body{padding-bottom:88px}.mobile-book-bar{position:fixed;display:flex;gap:8px;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));z-index:1000;background:var(--navy);padding:6px;border-radius:14px;box-shadow:0 8px 28px rgba(0,0,0,.28)}.mobile-book-bar a{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:9px;font-weight:800;text-align:center;padding:8px 12px}.mobile-book{flex:2;background:var(--gold);color:#111}.mobile-urgent{flex:1;background:#fff;color:var(--navy)}}
+
+
+/* Keep the third-party chat launcher clear of the mobile contact bar.
+   Leave Housecall Pro's own positioning and chat panel untouched. */
+html:has(#housecall-pro-chat-bubble) body::after {
+  content: "Chat with Us";
+  position: fixed;
+  right: 88px;
+  bottom: calc(max(12px, env(safe-area-inset-bottom)) + 18px);
+  background: #fff;
+  color: #0b1b3a;
+  border: 1px solid #d8e0ef;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+  box-shadow: 0 3px 12px rgba(11,27,58,.12);
+  pointer-events: none;
+  z-index: 999;
+}
+@media (max-width: 640px) {
+  html:has(#housecall-pro-chat-bubble) body { padding-bottom: 180px; }
+  html:has(#housecall-pro-chat-bubble) .mobile-book-bar {
+    bottom: calc(max(12px, env(safe-area-inset-bottom)) + 88px);
+  }
+}
