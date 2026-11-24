@@ -186,3 +186,8 @@ img{max-width:100%; display:block}
 .repair-first-section .strip { text-align: left; }
 .repair-first-section .badge { display: inline-block; margin-bottom: 12px; }
 .repair-first-section .center-cta { margin-top: 24px; }
+
+/* Responsive navigation: keep service links available on mobile. */
+.nav {flex-wrap:wrap;}
+.menu {gap:10px 16px;}
+@media(max-width:980px){.nav{align-items:flex-start;gap:12px}.menu{display:flex;flex-wrap:wrap;width:100%;gap:8px 14px}.menu a{font-size:14px}.menu .cta{padding:8px 12px}}
