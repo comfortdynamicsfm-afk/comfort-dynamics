@@ -191,3 +191,9 @@ img{max-width:100%; display:block}
 .nav {flex-wrap:wrap;}
 .menu {gap:10px 16px;}
 @media(max-width:980px){.nav{align-items:flex-start;gap:12px}.menu{display:flex;flex-wrap:wrap;width:100%;gap:8px 14px}.menu a{font-size:14px}.menu .cta{padding:8px 12px}}
+
+/* Online booking: preserve existing gold primary action and accessible phone alternative. */
+.btn-call-alternative{background:#fff;color:var(--navy);border:2px solid var(--navy);margin:2px 0;}
+.booking-note{font-size:15px!important;line-height:1.5;color:inherit;max-width:650px;}
+.mobile-book-bar{display:none;}
+@media(max-width:640px){body{padding-bottom:88px}.mobile-book-bar{position:fixed;display:flex;gap:8px;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));z-index:1000;background:var(--navy);padding:6px;border-radius:14px;box-shadow:0 8px 28px rgba(0,0,0,.28)}.mobile-book-bar a{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:9px;font-weight:800;text-align:center;padding:8px 12px}.mobile-book{flex:2;background:var(--gold);color:#111}.mobile-urgent{flex:1;background:#fff;color:var(--navy)}}

@@ -32,6 +32,12 @@
   document.addEventListener('DOMContentLoaded', function () {
     track('page_view_custom', { title: document.title });
 
+    document.querySelectorAll('a[data-track="online-booking"]').forEach(function (link) {
+      link.addEventListener('click', function () {
+        track('online_booking_click', { link_text: (link.textContent || '').trim() });
+      });
+    });
+
     document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
       link.addEventListener('click', function () {
         track('phone_call_click', {
